@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bx2rg78cu21y2"]
+
+[ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="1_0vwjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsuno"]
+size = Vector2(8, 11)
+
+[node name="Tree" type="StaticBody2D" unique_id=1824641235]
+collision_mask = 0
+
+[node name="Tree1" type="Sprite2D" parent="." unique_id=511481947]
+y_sort_enabled = true
+texture = ExtResource("1_0vwjc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348111858]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_rsuno")

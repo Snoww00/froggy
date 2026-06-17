@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cw15wriey20cw"]
+
+[ext_resource type="Script" uid="uid://cyalxa45y0bf6" path="res://Scenes/yellow_car.gd" id="1_abajg"]
+[ext_resource type="Texture2D" uid="uid://ded8huv3lr1a7" path="res://graphics/cars/yellow.png" id="1_xqrqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abajg"]
+size = Vector2(24, 12)
+
+[node name="Yellow car" type="Area2D" unique_id=937777556]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_abajg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=212794490]
+texture = ExtResource("1_xqrqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1707016212]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_abajg")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1742888656]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
