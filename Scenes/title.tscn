@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.3882353, 0.23529412, 0.39607844, 1)
+color = Color(0.32156864, 0.62352943, 0.32156864, 1)
 
 [node name="Label" type="Label" parent="." unique_id=312669853]
 layout_mode = 1
@@ -38,7 +38,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_fp2oq")
 theme_override_font_sizes/font_size = 140
-text = "Car game"
+text = "Froggy"
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1295904394]
 layout_mode = 1
@@ -72,6 +73,7 @@ theme_override_fonts/font = ExtResource("3_yosvi")
 theme_override_font_sizes/font_size = 30
 text = "high score : test
 "
+horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=1470844101]
 layout_mode = 1
@@ -91,3 +93,4 @@ theme_override_fonts/font = ExtResource("3_yosvi")
 theme_override_font_sizes/font_size = 15
 text = "Press space to restart
 "
+horizontal_alignment = 1

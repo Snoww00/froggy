@@ -54,7 +54,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pu2lt")
 }],
-"loop": true,
+"loop": 1,
 "name": &"down",
 "speed": 7.0
 }, {
@@ -71,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x3wgy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"left",
 "speed": 5.0
 }, {
@@ -88,14 +88,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h4iuc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"up",
 "speed": 7.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukyrk"]
-radius = 4.0
-height = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2qps"]
+size = Vector2(6, 4)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=480758557]
 collision_layer = 2
@@ -109,4 +108,5 @@ autoplay = "left"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1274443565]
-shape = SubResource("CapsuleShape2D_ukyrk")
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_q2qps")
