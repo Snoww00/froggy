@@ -1,10 +1,16 @@
 extends Node2D
 
 var car_scene: PackedScene = preload("res://Scenes/yellow_car.tscn")
+var score: int
 
-func _on_finish_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
-	print('Has entered!')
+func _on_finish_area_2d_body_entered(_body: Node2D) -> void:
+	call_deferred("change_scene")
+	if score < Global.score and score != 0:
+		Global.score = score
+
+func change_scene():
+	get_tree().change_scene_to_file("res://Scenes/title.tscn")
+
 
 
 func _on_car_timer_timeout() -> void:
@@ -15,5 +21,10 @@ func _on_car_timer_timeout() -> void:
 	car.connect("body_entered" , go_to_title)
 
 func go_to_title(body):
-	print(body)
-	print('Player Car Collision')
+	call_deferred("change_scene")
+
+
+
+func _on_score_timer_timeout() -> void:
+	score += 1
+	$Ui/Score.text = 'Time elapsed:' + str(score)

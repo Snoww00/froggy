@@ -2,6 +2,10 @@ extends Area2D
 
 var direction = Vector2.LEFT
 var speed = 150
+var colors = [
+	preload("res://graphics/cars/green.png"),
+	preload("res://graphics/cars/yellow.png"),
+	preload("res://graphics/cars/red.png"),]
 
 # 1. Track where the car spawned
 var start_position : Vector2
@@ -12,6 +16,8 @@ func _ready() -> void:
 	if position.x <0:
 		direction.x = 1
 		$Sprite2D.flip_h = true
+	$Sprite2D.texture = colors.pick_random()
+		
 	# Save the exact spot where this car was created
 	start_position = position
 

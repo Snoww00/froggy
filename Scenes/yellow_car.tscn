@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cw15wriey20cw"]
 
-[ext_resource type="Script" uid="uid://cyalxa45y0bf6" path="res://Scenes/yellow_car.gd" id="1_abajg"]
+[ext_resource type="Script" uid="uid://cyalxa45y0bf6" path="res://Scripts/yellow_car.gd" id="1_abajg"]
 [ext_resource type="Texture2D" uid="uid://ded8huv3lr1a7" path="res://graphics/cars/yellow.png" id="1_xqrqj"]
+[ext_resource type="AudioStream" uid="uid://b72b6pqe72w3n" path="res://audio/car.mp3" id="3_oo5rn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abajg"]
 size = Vector2(24, 12)
@@ -19,5 +20,12 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_abajg")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1742888656]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=829177962]
+stream = ExtResource("3_oo5rn")
+volume_db = -20.18
+autoplay = true
+max_distance = 150.0
+parameters/looping = false
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
